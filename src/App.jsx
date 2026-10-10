@@ -5,6 +5,10 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import SubmitOtp from "./pages/SubmitOtp";
 import ResetPassword from "./pages/ResetPassword";
+import DashboardLayout from "./components/DashboardLayout";
+import Dashboard from "./pages/Dashboard";
+import AddBilty from "./pages/AddBilty";
+import BiltyReport from "./pages/BiltyReport";
 
 export default function App() {
   return (
@@ -15,6 +19,12 @@ export default function App() {
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/submit-otp" element={<SubmitOtp />} />
       <Route path="/reset-password" element={<ResetPassword />} />
+
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="add-bilty" element={<AddBilty />} />
+        <Route path="bilty-report" element={<BiltyReport />} />
+      </Route>
     </Routes>
   );
 }
