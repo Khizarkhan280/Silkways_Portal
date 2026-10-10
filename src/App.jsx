@@ -5,10 +5,10 @@ import Login from "./pages/Login";
 import ForgotPassword from "./pages/ForgotPassword";
 import SubmitOtp from "./pages/SubmitOtp";
 import ResetPassword from "./pages/ResetPassword";
-import DashboardLayout from "./components/DashboardLayout";
-import Dashboard from "./pages/Dashboard";
-import AddBilty from "./pages/AddBilty";
-import BiltyReport from "./pages/BiltyReport";
+import DashboardLayout from "./components/dashboard/DashboardLayout";
+import Dashboard from "./pages/dashboard/Dashboard";
+import AddBilty from "./pages/dashboard/AddBilty";
+import BiltyReport from "./pages/dashboard/BiltyReport";
 
 export default function App() {
   return (

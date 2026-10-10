@@ -1,6 +1,6 @@
-import WelcomeBanner from "../components/WelcomeBanner";
-import QuickActionCard from "../components/QuickActionCard";
-import { DocPlusIcon, ReportIcon } from "../components/DashboardIcons";
+import WelcomeBanner from "../../components/dashboard/WelcomeBanner";
+import QuickActionCard from "../../components/dashboard/QuickActionCard";
+import { DocPlusIcon, ReportIcon } from "../../components/dashboard/DashboardIcons";
 
 export default function Dashboard() {
   return (

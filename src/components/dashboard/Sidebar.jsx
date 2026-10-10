@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { HomeIcon, DocPlusIcon, ReportIcon } from "./DashboardIcons";
 
 const linkClass = ({ isActive }) => (isActive ? "nav-item nav-item-active" : "nav-item");
