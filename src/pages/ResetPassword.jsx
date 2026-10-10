@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import AuthLayout from "../components/AuthLayout";
-import FormField from "../components/FormField";
-import { LockIcon } from "../components/icons";
+import PasswordField from "../components/PasswordField";
 
 export default function ResetPassword() {
   const navigate = useNavigate();
@@ -17,7 +16,8 @@ export default function ResetPassword() {
       <p className="auth-subtitle">Choose a new password for your account</p>
 
       <form onSubmit={handleSubmit} className="auth-form">
-        <FormField label="New password" icon={LockIcon} name="newPassword" type="password" placeholder="Enter new password" required />
+        <PasswordField label="New password" name="newPassword" placeholder="Enter new password" required />
+        <PasswordField label="Confirm password" name="confirmPassword" placeholder="Re-enter new password" required />
         <button type="submit" className="btn-primary auth-submit">Reset password</button>
       </form>
     </AuthLayout>

@@ -1,7 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import AuthLayout from "../components/AuthLayout";
 import FormField from "../components/FormField";
-import { UserIcon, MailIcon, LockIcon } from "../components/icons";
+import PasswordField from "../components/PasswordField";
+import { UserIcon, MailIcon } from "../components/icons";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ export default function Register() {
       <form onSubmit={handleSubmit} className="auth-form">
         <FormField label="Full name" icon={UserIcon} name="name" type="text" placeholder="Your full name" required />
         <FormField label="Email" icon={MailIcon} name="email" type="email" placeholder="you@company.com" required />
-        <FormField label="Password" icon={LockIcon} name="password" type="password" placeholder="Enter your password" required />
+        <PasswordField label="Password" name="password" placeholder="Enter your password" required />
         <button type="submit" className="btn-primary auth-submit">Sign Up</button>
       </form>
 

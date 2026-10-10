@@ -132,6 +132,10 @@
   .auth-input-field {
     @apply w-full min-w-0 bg-transparent text-sm text-brand placeholder-line outline-none;
   }
+  .auth-eye {
+    @apply -mr-1 inline-flex shrink-0 items-center justify-center rounded-md p-1 text-line transition
+          hover:text-primary focus-visible:outline-2 focus-visible:outline-primary;
+  }
   .auth-link {
     @apply text-sm font-medium text-primary hover:text-primary-dark;
   }
