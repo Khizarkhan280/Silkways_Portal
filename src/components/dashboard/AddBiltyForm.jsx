@@ -1,6 +1,5 @@
 import { useState } from "react";
 import BiltyField from "./BiltyField";
-import { api } from "../../api";
 
 const emptyForm = () => ({
   biltyNo: "", origin: "", destination: "", to: "", from: "",
@@ -30,15 +29,16 @@ export default function AddBiltyForm() {
     setSaving(true);
     setStatus({ type: "", text: "" });
     try {
-      await api("/bilties", { method: "POST", body: JSON.stringify(form) });
+      // TODO (backend developer): yahan API call lagani hai.
+      // Bhejne wala data: { ...form, rate }
+      // Example: await api("/bilties", { method: "POST", body: JSON.stringify(form) });
+      console.log("Bilty form data:", { ...form, rate });
+
       setForm(emptyForm());
       setStatus({ type: "success", text: "BILTY SAVED SUCCESSFULLY." });
       document.getElementById("biltyNo")?.focus();
     } catch (err) {
-      setStatus({
-        type: "error",
-        text: err instanceof TypeError ? "CANNOT REACH THE SERVER." : err.message,
-      });
+      setStatus({ type: "error", text: err.message || "SOMETHING WENT WRONG." });
     } finally {
       setSaving(false);
     }
